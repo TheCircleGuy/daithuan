@@ -1,4 +1,4 @@
 streamlit
 pandas
-streamlit.components.v1
+streamlit.components
 matplotlib==3.4.3
