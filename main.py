@@ -63,17 +63,19 @@ def display_summary_statistics5():
     summary_text = """
     # Summary Statistics and Percentages for Travel Time:  5WH
  ---------------------------------------------------
-- Mean Travel Time: 19.45 minutes
-- Mode Travel Time: 15.00 minutes
-- Max Travel Time: 57.00 minutes
-- Total Data Points: 2016
-- Percentage of Data Less Than 5 minutes: 1.64%
-- Percentage of Data Less Than 10 minutes: 11.76%
-- Percentage of Data Less Than 15 minutes: 28.97%
-- Percentage of Data Less Than 20 minutes: 54.12%
-- Percentage of Data Less Than 30 minutes: 89.38%
-- Percentage of Data Less Than 45 minutes: 98.56%
-- Percentage of Data Less Than 60 minutes: 100.00%
+- Summary Statistics and Percentages for Travel Time:
+---------------------------------------------------
+-Mean Travel Time: 15.04 minutes
+-Mode Travel Time: 13.00 minutes
+-Max Travel Time: 58.00 minutes
+-Total Data Points: 2016
+-Percentage of Data Less Than 5 minutes: 3.08%
+-Percentage of Data Less Than 10 minutes: 19.00%
+-Percentage of Data Less Than 15 minutes: 48.51%
+-Percentage of Data Less Than 20 minutes: 78.52%
+-Percentage of Data Less Than 30 minutes: 98.07%
+-Percentage of Data Less Than 45 minutes: 99.95%
+-Percentage of Data Less Than 60 minutes: 100.00%
     """
     st.markdown(summary_text)
 
