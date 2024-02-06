@@ -148,14 +148,15 @@ def main():
     # Determine the optimal number of warehouses based on the selected time interval
     if delivery_time == "30 min":
 
-        with st.spinner('Optimizing the warehouse locations'):
-            time.sleep(5)
-            st.success('Done!')
+        # with st.spinner('Optimizing the warehouse locations'):
+        #     time.sleep(5)
+        #     st.success('Done!')
 
         num_warehouses = 5
+        
         st.write("The optimal number of warehouses is:", num_warehouses)
         st.table(df5) 
-        file_path = "https://raw.githubusercontent.com/TheCircleGuy/daithuan/master/map%205.html"
+        file_path = "https://raw.githubusercontent.com/TheCircleGuy/daithuan/master/map 5.html"
         # Create a download button
         download_button = st.button("Download Map 5.html")
 
