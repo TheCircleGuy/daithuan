@@ -2,6 +2,19 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
+
+st.set_page_config(
+    page_title="Dias - Dai Thuan Warehouse Location Optimisation",
+    page_icon="🧊",
+
+    initial_sidebar_state="expanded",
+    menu_items={
+        'Get Help': 'https://www.linkedin.com/in/svenroering/',
+        'Report a bug': "https://www.linkedin.com/in/svenroering/",
+        'About': "https://www.linkedin.com/in/svenroering/"
+    }
+)
+st.markdown('<img src="https://raw.githubusercontent.com/TheCircleGuy/daithuan/master/banner.jpg" style="width:100%;" />', unsafe_allow_html=True)
 def display_summary_statistics2():
     summary_text = """
     # Summary Statistics and Percentages for Travel Time: 
@@ -84,24 +97,26 @@ def main():
 
 
 
-    excel_file_path5 = 'warehouse_data_5_clusters.xlsx'
-    excel_file_path3 = 'warehouse_data_3_clusters.xlsx'
-    excel_file_path2 = 'warehouse_data_2_clusters.xlsx'
-    df5 = pd.read_excel(excel_file_path5, sheet_name='warehouse')
-    df3 = pd.read_excel(excel_file_path3, sheet_name='warehouse')
-    df2 = pd.read_excel(excel_file_path2, sheet_name='warehouse')
+    excel_file_path5 = 'warehouse_5.csv'
+    excel_file_path3 = 'warehouse_3.csv'
+    excel_file_path2 = 'warehouse_2.csv'
+    df5 = pd.read_csv(excel_file_path5)
+    df3 = pd.read_csv(excel_file_path3)
+    df2 = pd.read_csv(excel_file_path2)
 
-    # Load POS data for travel time 5
-    pos_data_path = 'Consol_pos_info.xlsx'
-    df_pos = pd.read_excel(pos_data_path, sheet_name='POS')
+  
     
 
     st.title("Microwarehouse Generator")
     
+    
+
     # Section 1: Description
     st.header("Description")
     st.write("Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
     
+    
+
     # Section 2: Delivery Time Selection
     st.header("Select Delivery Time")
     delivery_time = st.selectbox("Select delivery time", ["SELECT TIME OPTION", "30 min", "45 min", "60 min"])
@@ -125,7 +140,7 @@ def main():
             </style>
             """, unsafe_allow_html=True
         )
-
+        st.components.v1.iframe(src='http://127.0.0.1:5500/map%205.html', height=600, scrolling=True)
         st.image("plt5.png")
         display_summary_statistics5()
 
@@ -176,6 +191,8 @@ def main():
 
         display_summary_statistics2()
         pass
+    
+    
 
 
 
