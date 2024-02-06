@@ -149,8 +149,8 @@ def main():
     if delivery_time == "30 min":
 
         with st.spinner('Wait for it...'):
-        time.sleep(5)
-        st.success('Done!')
+            time.sleep(5)
+            st.success('Done!')
 
         num_warehouses = 5
         st.write("The optimal number of warehouses is:", num_warehouses)
