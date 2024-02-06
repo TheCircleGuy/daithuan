@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import streamlit.components.v1 as components
 import matplotlib.pyplot as plt
 
 def display_summary_statistics2():
