@@ -122,8 +122,12 @@ def main():
 
     # Section 1: Description
     st.header("Description")
-    st.write("The objective of this tool is to optimize the microwarehouse network for Dai Thuan. The optimal network is determined by minimizing warehouse and transportation costs, achieved through the strategic determination of the most effective number of warehouse locations to meet the required delivery time")
-    st.write("Point of Sales (POS) addresses are used as inputs to the generator which combines the Google Maps API (to feth the raod distance and travel times between POS and warehouses) and K-Means clustering algorithm (to identify clusters of POS) using the Python programming language")
+    st.write("The objective of this tool is to optimize the microwarehouse network for Dai Thuan. The optimal network is determined by minimizing warehouse and transportation costs, achieved through the strategic determination of the most effective number of warehouse locations to meet the required delivery time.")
+    st.write("The equation for optimizing Micro Warehouse locations can be described as the equation below: ")
+    st.latex(r'''
+\text{Optimal cold chain} = \min(\text{warehouse cost}) + \min(\text{transport cost of DC \& POS})
+''')
+    st.write("Point of Sales (POS) addresses are used as inputs to the generator which combines the Google Maps API (to fetch the road distance and travel times between POS and warehouses) and K-Means clustering algorithm (to identify clusters of POS) using the Python programming language")
     
     
 
