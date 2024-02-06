@@ -198,6 +198,10 @@ def main():
         st.write("The optimal number of warehouses is:", num_warehouses)
         st.table(df3)
         # st.link_button("Open Your Map", "map 3.html")
+
+         file_path = "map 3.html"
+        # Create a download button
+        download_button = st.button("Download Map 3.html")
         st.markdown(
             """
             <style>
@@ -212,9 +216,7 @@ def main():
             """, unsafe_allow_html=True
         )
 
-        file_path = "map 3.html"
-        # Create a download button
-        download_button = st.button("Download Map 3.html")
+       
 
         st.image("https://raw.githubusercontent.com/TheCircleGuy/daithuan/master/plt3.png")  
         display_summary_statistics3()
