@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import base64
+import time
 
 st.set_page_config(
     page_title="Dias - Dai Thuan Warehouse Location Optimisation",
@@ -146,6 +147,14 @@ def main():
     delivery_time = st.selectbox("Select delivery time", ["SELECT TIME OPTION", "30 min", "45 min", "60 min"])
     # Determine the optimal number of warehouses based on the selected time interval
     if delivery_time == "30 min":
+
+        progress_text = "Generating optimal warehouse location. Please wait."
+        my_bar = st.progress(0, text=progress_text)
+
+        for percent_complete in range(100):
+            time.sleep(0.1)
+            my_bar.progress(percent_complete + 1, text=progress_text)
+
         num_warehouses = 5
         st.write("The optimal number of warehouses is:", num_warehouses)
         st.table(df5) 
@@ -181,6 +190,15 @@ def main():
 
 
     elif delivery_time == "45 min":
+
+        progress_text = "Generating optimal warehouse location. Please wait."
+        my_bar = st.progress(0, text=progress_text)
+
+        for percent_complete in range(100):
+            time.sleep(0.1)
+            my_bar.progress(percent_complete + 1, text=progress_text)
+
+        
         num_warehouses = 3
         st.write("The optimal number of warehouses is:", num_warehouses)
         st.table(df3)
@@ -207,6 +225,15 @@ def main():
         display_summary_statistics3()
         pass
     elif delivery_time == "60 min":
+
+        progress_text = "Generating optimal warehouse location. Please wait."
+        my_bar = st.progress(0, text=progress_text)
+
+        for percent_complete in range(100):
+            time.sleep(0.1)
+            my_bar.progress(percent_complete + 1, text=progress_text)
+
+        
         num_warehouses = 2
         st.write("The optimal number of warehouses is:", num_warehouses)
         st.table(df2)
