@@ -155,7 +155,7 @@ def main():
         num_warehouses = 5
         st.write("The optimal number of warehouses is:", num_warehouses)
         st.table(df5) 
-        file_path = "map 5.html"
+        file_path = "https://raw.githubusercontent.com/TheCircleGuy/daithuan/master/map%205.html"
         # Create a download button
         download_button = st.button("Download Map 5.html")
 
@@ -211,7 +211,7 @@ def main():
             """, unsafe_allow_html=True
         )
 
-        file_path = "map 3.html"
+        file_path = "https://raw.githubusercontent.com/TheCircleGuy/daithuan/master/map%203.html"
         # Create a download button
         download_button = st.button("Download Map 3.html")
 
@@ -244,7 +244,7 @@ def main():
         )
 
 
-        file_path = "map 2.html"
+        file_path = "https://raw.githubusercontent.com/TheCircleGuy/daithuan/master/map%202.html"
         # Create a download button
         download_button = st.button("Download Map 2.html")
 
