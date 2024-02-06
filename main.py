@@ -148,12 +148,9 @@ def main():
     # Determine the optimal number of warehouses based on the selected time interval
     if delivery_time == "30 min":
 
-        progress_text = "Operation in progress. Please wait."
-        my_bar = st.progress(0, text=progress_text)
-        
-        for percent_complete in range(100):
-            time.sleep(0.1)
-            my_bar.progress(percent_complete + 1, text=progress_text)
+        with st.spinner('Wait for it...'):
+        time.sleep(5)
+        st.success('Done!')
 
         num_warehouses = 5
         st.write("The optimal number of warehouses is:", num_warehouses)
