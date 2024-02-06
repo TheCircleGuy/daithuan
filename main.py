@@ -202,7 +202,7 @@ def main():
         # st.link_button("Open Your Map", "map 3.html")
 
 
-         file_path = "map 3.html"
+        file_path = "map 3.html"
         # Create a download button
         download_button = st.button("Download Map 3.html")
 
