@@ -45,16 +45,16 @@ def display_summary_statistics3():
     summary_text = """
     # Summary Statistics and Percentages for Travel Time: 
     ---------------------------------------------------
-    - Mean Travel Time: 19.45 minutes
-    - Mode Travel Time: 15.00 minutes
-    - Max Travel Time: 57.00 minutes
+    - Mean Travel Time: 18.42 minutes
+    - Mode Travel Time: 19.00 minutes
+    - Max Travel Time: 58.00 minutes
     - Total Data Points: 2016
     - Percentage of Data Less Than 5 minutes: 1.64%
-    - Percentage of Data Less Than 10 minutes: 11.76%
-    - Percentage of Data Less Than 15 minutes: 28.97%
-    - Percentage of Data Less Than 20 minutes: 54.12%
-    - Percentage of Data Less Than 30 minutes: 89.38%
-    - Percentage of Data Less Than 45 minutes: 98.56%
+    - Percentage of Data Less Than 10 minutes: 9.38%
+    - Percentage of Data Less Than 15 minutes: 28.82%
+    - Percentage of Data Less Than 20 minutes: 58.23%
+    - Percentage of Data Less Than 30 minutes: 94.44%
+    - Percentage of Data Less Than 45 minutes: 99.60%
     - Percentage of Data Less Than 60 minutes: 100.00%
     """
     st.markdown(summary_text)
