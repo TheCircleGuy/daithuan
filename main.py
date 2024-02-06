@@ -138,7 +138,7 @@ def main():
 
 
 
-   st.markdown("Point of Sales (POS) addresses are used as inputs to the generator which combines the [Google Maps API](https://developers.google.com/maps) (to fetch the road distance and travel times between POS and warehouses) and [K-Means clustering algorithm](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html) (to identify clusters of POS) using the Python programming language.")
+    st.markdown("Point of Sales (POS) addresses are used as inputs to the generator which combines the [Google Maps API](https://developers.google.com/maps) (to fetch the road distance and travel times between POS and warehouses) and [K-Means clustering algorithm](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html) (to identify clusters of POS) using the Python programming language.")
     
     
 
