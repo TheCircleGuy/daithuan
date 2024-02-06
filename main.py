@@ -129,7 +129,7 @@ def main():
             ''')
     st.write("For the minimized warehouse cost:")
     st.write("- Ensure the right number of warehouses, avoiding excess or shortages.")
-    st.write("- Ensure each warehouse is sized appropriately to accommodate all point-of-sale (POS) demand and hold enough inventory to minimize trips from the distribution center (i.e., enough to hold one week's worth of inventory).")
+    st.write("- Ensure each warehouse is sized appropriately to accommodate all point-of-sale (POS) demand and hold enough inventory to minimize trips from the distribution center (i.e. enough to hold one month's worth of inventory).")
     
     st.write("For the minimized transport cost:")
     st.write("- Minimize the time it takes for deliveries from the main warehouse (MW) to the point of sale (POS).")
