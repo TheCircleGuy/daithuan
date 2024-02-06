@@ -116,7 +116,7 @@ def main():
   
     
 
-    st.title("Microwarehouse Generator")
+    st.title("Microwarehouse Location Generator")
     
     
 
