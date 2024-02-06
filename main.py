@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-
+import base64
 
 st.set_page_config(
     page_title="Dias - Dai Thuan Warehouse Location Optimisation",
@@ -14,6 +14,15 @@ st.set_page_config(
         'About': "https://www.linkedin.com/in/svenroering/"
     }
 )
+
+# Function to create a download link
+def create_download_link(file_path, button_text="Download File"):
+    with open(file_path, "rb") as file:
+        contents = file.read()
+        encoded_file = base64.b64encode(contents).decode()
+        href = f'<a href="data:file/html;base64,{encoded_file}" download="{file_path}">{button_text}</a>'
+    return href
+
 st.markdown('<img src="https://raw.githubusercontent.com/TheCircleGuy/daithuan/master/banner.jpg" style="width:100%;" />', unsafe_allow_html=True)
 def display_summary_statistics2():
     summary_text = """
@@ -125,7 +134,13 @@ def main():
         num_warehouses = 5
         st.write("The optimal number of warehouses is:", num_warehouses)
         st.table(df5) 
-        st.link_button("Open Your Map", "map5.html")
+        file_path = "map 5.html"
+        # Create a download button
+        download_button = st.button("Download Map 5.html")
+
+        # Display the download link when the button is clicked
+        if download_button:
+            st.markdown(create_download_link(file_path), unsafe_allow_html=True)
         
         st.markdown(
             """
@@ -140,8 +155,12 @@ def main():
             </style>
             """, unsafe_allow_html=True
         )
-        st.components.v1.iframe(src='http://127.0.0.1:5500/map%205.html', height=600, scrolling=True)
-        st.image("plt5.png")
+
+        # file_path = "map 5.html"
+        # Create a download button
+        # download_button = st.button("Download Map 5.html")
+        
+        st.image("https://raw.githubusercontent.com/TheCircleGuy/daithuan/master/plt5.png")  
         display_summary_statistics5()
 
 
@@ -150,7 +169,7 @@ def main():
         num_warehouses = 3
         st.write("The optimal number of warehouses is:", num_warehouses)
         st.table(df3)
-        st.link_button("Open Your Map", "map 3.html")
+        # st.link_button("Open Your Map", "map 3.html")
         st.markdown(
             """
             <style>
@@ -165,14 +184,18 @@ def main():
             """, unsafe_allow_html=True
         )
 
-        st.image("plt3.png")
+        file_path = "map 3.html"
+        # Create a download button
+        download_button = st.button("Download Map 3.html")
+
+        st.image("https://raw.githubusercontent.com/TheCircleGuy/daithuan/master/plt3.png")  
         display_summary_statistics3()
         pass
     elif delivery_time == "60 min":
         num_warehouses = 2
         st.write("The optimal number of warehouses is:", num_warehouses)
         st.table(df2)
-        st.link_button("Open Your Map", "map 2.html")
+        # st.link_button("Open Your Map", "map 2.html")
         st.markdown(
             """
             <style>
@@ -187,7 +210,12 @@ def main():
             """, unsafe_allow_html=True
         )
 
-        st.image("plt2.png")
+
+        file_path = "map 2.html"
+        # Create a download button
+        download_button = st.button("Download Map 2.html")
+
+        st.image("https://raw.githubusercontent.com/TheCircleGuy/daithuan/master/plt2.png")
 
         display_summary_statistics2()
         pass
