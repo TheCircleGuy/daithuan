@@ -125,8 +125,15 @@ def main():
     st.write("The objective of this tool is to optimize the microwarehouse network for Dai Thuan. The optimal network is determined by minimizing warehouse and transportation costs, achieved through the strategic determination of the most effective number of warehouse locations to meet the required delivery time.")
     st.write("The equation for optimizing Micro Warehouse locations can be described as the equation below: ")
     st.latex(r'''
-\text{Optimal cold chain} = \min(\text{warehouse cost}) + \min(\text{transport cost of DC \& POS})
-''')
+            \text{Optimal cold chain} = \min(\text{warehouse cost}) + \min(\text{transport cost of DC \& POS})
+            ''')
+    st.write("For the minimized warehouse cost:
+    -Ensure the right number of warehouses, avoiding excess or shortages.
+    -Ensure each warehouse is sized appropriately to accommodate all point-of-sale (POS) demand and hold enough inventory to minimize trips from the distribution center (i.e., enough to hold one week's worth of inventory).")
+    st.write("For the minimized transport cost:
+    
+    -Minimize the time it takes for deliveries from the main warehouse (MW) to the point of sale (POS).
+    -Ensure the right number of trucks and bikes are used for transportation.")
     st.write("Point of Sales (POS) addresses are used as inputs to the generator which combines the Google Maps API (to fetch the road distance and travel times between POS and warehouses) and K-Means clustering algorithm (to identify clusters of POS) using the Python programming language")
     
     
